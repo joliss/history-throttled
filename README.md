@@ -23,7 +23,7 @@ they disable all calls to `replaceState` for a while.
 ## Features
 
 * Tiny: 0.4 KB min-gzipped with no dependencies
-* Smart: prioritizes `pushState` over `replaceState`
+* Smart: prioritizes `pushState` over `replaceState` when rate limited
 * Browser-aware: applies different throttling to Safari (310 ms) than other
   browsers (52 ms)
 * Compatible: works in any modern browser, and can be imported from Node
