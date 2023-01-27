@@ -1,0 +1,31 @@
+{
+  "name": "history-throttled",
+  "version": "1.0.0",
+  "description": "A throttled drop-in replacement for history.replaceState and history.pushState.",
+  "main": "dist-cjs/index.js",
+  "types": "dist-cjs/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist-cjs && mkdir dist-cjs && tsc --outDir dist-cjs --module commonjs",
+    "prepare": "npm run build",
+    "test": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joliss/history-throttled.git"
+  },
+  "keywords": [
+    "throttle",
+    "debounce",
+    "history",
+    "location"
+  ],
+  "author": "Jo Liss",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/joliss/history-throttled/issues"
+  },
+  "homepage": "https://github.com/joliss/history-throttled#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
