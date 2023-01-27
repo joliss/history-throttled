@@ -52,4 +52,4 @@ function setDelay(newDelay: number | null) {
   delay = newDelay;
 }
 
-export { replaceState, pushState, setDelay as setInterval };
+export { replaceState, pushState, setDelay };
