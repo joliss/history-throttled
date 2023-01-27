@@ -75,22 +75,27 @@ replaceState("", "", "/c/2");
 
 This will result in the following behavior:
 
+Immediately:
+
 ```js
-// Immediately (synchronously):
-
+// We're not yet rate limited when the first pushState call occurs, so
+// it will be executed synchronously.
 history.pushState("", "", "/a");
+```
 
+After 310 milliseconds:
 
-// After 310 milliseconds:
-
-// The most recent pushState call. The intermediate call to "/b"
-// is dropped, because it exceeds the allowed rate.
+```js
+// We run the most recent pushState call, because it takes priority over
+// the subsequent replaceState calls. Note that the intermediate pushState
+// call to "/b" is dropped, because it exceeds the allowed rate.
 history.pushState("", "", "/c");
+```
 
+After 620 milliseconds:
 
-// After 620 milliseconds:
-
-// The most recent of any remaining replaceState calls:
+```js
+// Finally, the most recent of any remaining replaceState calls is flushed.
 history.replaceState("", "", "/c/2");
 ```
 
