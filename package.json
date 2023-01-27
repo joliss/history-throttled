@@ -1,6 +1,6 @@
 {
   "name": "history-throttled",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A throttled drop-in replacement for history.replaceState and history.pushState.",
   "main": "dist-cjs/index.js",
   "types": "dist-cjs/index.d.ts",
