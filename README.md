@@ -56,7 +56,7 @@ all calls to `history.pushState` with the throttled version:
   being executed out-of-order after `pushState`, which would result in a wrong
   URL state.
 
-## Behavior
+## Behavior in detail
 
 When you call `replaceState` or `pushState` more often than every 310
 milliseconds (or 52 milliseconds on non-Safari browsers), calls will be
